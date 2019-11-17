@@ -384,7 +384,7 @@ class MusicBrainz(DataProvider):
         self.log.debug("%-8s %-6s use mbid '%s'.", self.name, entity, mbid)
         if entity == 'album':
             entity = 'release-group'
-        return self._query(entity + '/' + mbid, {'inc': 'tags'})
+        return self._query(entity + '/' + str(mbid), {'inc': 'tags'})
 
 
 class Redacted(DataProvider):
